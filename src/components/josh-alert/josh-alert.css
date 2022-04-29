@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 32px auto;
+  grid-template-rows: 32px minmax(32px, auto);
+  background-color: var(--black-theme-secondary-black);
+  border: solid var(--black-theme-success);
+  border-width: 0.5px 4px;
+  border-radius: 2px;
+  width: 512px;
+}
+
+.container[data-kind=success] {
+  border-color: var(--black-theme-success);
+}
+
+.container[data-kind=error] {
+  border-color: var(--black-theme-error);
+}
+
+.icon {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
+
+.title {
+  grid-column: 2;
+  grid-row: 1;
+  font-weight: bold;
+  align-self: center;
+}
+
+.body {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  padding: 8px 0;
+}
