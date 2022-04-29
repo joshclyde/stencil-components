@@ -6,82 +6,90 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface JoshButton {
+    interface JoshAlert {
+        "kind": 'success' | 'error';
     }
-    interface JoshHeading {
+    interface JoshHeading1 {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface JoshIconCheckmark {
+        "color": string;
+    }
+    interface JoshIconError {
+        "color": string;
+    }
+    interface JoshText {
     }
 }
 declare global {
-    interface HTMLJoshButtonElement extends Components.JoshButton, HTMLStencilElement {
+    interface HTMLJoshAlertElement extends Components.JoshAlert, HTMLStencilElement {
     }
-    var HTMLJoshButtonElement: {
-        prototype: HTMLJoshButtonElement;
-        new (): HTMLJoshButtonElement;
+    var HTMLJoshAlertElement: {
+        prototype: HTMLJoshAlertElement;
+        new (): HTMLJoshAlertElement;
     };
-    interface HTMLJoshHeadingElement extends Components.JoshHeading, HTMLStencilElement {
+    interface HTMLJoshHeading1Element extends Components.JoshHeading1, HTMLStencilElement {
     }
-    var HTMLJoshHeadingElement: {
-        prototype: HTMLJoshHeadingElement;
-        new (): HTMLJoshHeadingElement;
+    var HTMLJoshHeading1Element: {
+        prototype: HTMLJoshHeading1Element;
+        new (): HTMLJoshHeading1Element;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLJoshIconCheckmarkElement extends Components.JoshIconCheckmark, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLJoshIconCheckmarkElement: {
+        prototype: HTMLJoshIconCheckmarkElement;
+        new (): HTMLJoshIconCheckmarkElement;
+    };
+    interface HTMLJoshIconErrorElement extends Components.JoshIconError, HTMLStencilElement {
+    }
+    var HTMLJoshIconErrorElement: {
+        prototype: HTMLJoshIconErrorElement;
+        new (): HTMLJoshIconErrorElement;
+    };
+    interface HTMLJoshTextElement extends Components.JoshText, HTMLStencilElement {
+    }
+    var HTMLJoshTextElement: {
+        prototype: HTMLJoshTextElement;
+        new (): HTMLJoshTextElement;
     };
     interface HTMLElementTagNameMap {
-        "josh-button": HTMLJoshButtonElement;
-        "josh-heading": HTMLJoshHeadingElement;
-        "my-component": HTMLMyComponentElement;
+        "josh-alert": HTMLJoshAlertElement;
+        "josh-heading-1": HTMLJoshHeading1Element;
+        "josh-icon-checkmark": HTMLJoshIconCheckmarkElement;
+        "josh-icon-error": HTMLJoshIconErrorElement;
+        "josh-text": HTMLJoshTextElement;
     }
 }
 declare namespace LocalJSX {
-    interface JoshButton {
+    interface JoshAlert {
+        "kind"?: 'success' | 'error';
     }
-    interface JoshHeading {
+    interface JoshHeading1 {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface JoshIconCheckmark {
+        "color"?: string;
+    }
+    interface JoshIconError {
+        "color"?: string;
+    }
+    interface JoshText {
     }
     interface IntrinsicElements {
-        "josh-button": JoshButton;
-        "josh-heading": JoshHeading;
-        "my-component": MyComponent;
+        "josh-alert": JoshAlert;
+        "josh-heading-1": JoshHeading1;
+        "josh-icon-checkmark": JoshIconCheckmark;
+        "josh-icon-error": JoshIconError;
+        "josh-text": JoshText;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "josh-button": LocalJSX.JoshButton & JSXBase.HTMLAttributes<HTMLJoshButtonElement>;
-            "josh-heading": LocalJSX.JoshHeading & JSXBase.HTMLAttributes<HTMLJoshHeadingElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "josh-alert": LocalJSX.JoshAlert & JSXBase.HTMLAttributes<HTMLJoshAlertElement>;
+            "josh-heading-1": LocalJSX.JoshHeading1 & JSXBase.HTMLAttributes<HTMLJoshHeading1Element>;
+            "josh-icon-checkmark": LocalJSX.JoshIconCheckmark & JSXBase.HTMLAttributes<HTMLJoshIconCheckmarkElement>;
+            "josh-icon-error": LocalJSX.JoshIconError & JSXBase.HTMLAttributes<HTMLJoshIconErrorElement>;
+            "josh-text": LocalJSX.JoshText & JSXBase.HTMLAttributes<HTMLJoshTextElement>;
         }
     }
 }
