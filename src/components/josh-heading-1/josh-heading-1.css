@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+h1 {
+  font-weight: 400;
+  color: var(--black-theme-white);
+  margin: 16px 0;
+}
